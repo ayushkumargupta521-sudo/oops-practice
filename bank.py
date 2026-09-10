@@ -4,7 +4,7 @@ class ATM:
         customer.pin = ""
         customer.deposit = ""
         customer.withdraw = ""
-        customer.totalamount = ""
+        customer.balance = ""
 
     def bank(customer):
         user_input = ("""
@@ -15,3 +15,23 @@ class ATM:
         5. Total Amount
         6. Exit
         """)
+
+
+        def customer_name(bank):
+            customer.name == input("Enter Your Name: ")
+            print("Name Entered Successfully")
+
+        def customer_pin(bank):
+            customer.pin == int(input("Set Your 4 Digit Pin: "))
+            print("Pin Set Successfully")
+
+        def customer_deposit(bank):
+            temp = int(input("Enter Your Pin"))
+            if temp == customer.pin:
+                amount = int(input("Deposit Amount: "))
+                if amount < customer.balance:
+                    customer.balance = customer.balance - amount
+                    print(customer.deposit,"rupee you Deposit in your Account")
+
+        def customer_withdraw(bank):
+            customer.withdraw == 
