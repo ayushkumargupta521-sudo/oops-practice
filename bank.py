@@ -1,37 +1,46 @@
 class ATM:
-    def __int__(customer):
-        customer.name = ""
-        customer.pin = ""
-        customer.deposit = ""
-        customer.withdraw = ""
-        customer.balance = ""
+    def __init__(self):
+        self.name = ""
+        self.pin = 0
+        self.deposit = 0
+        self.withdraw = 0
 
-    def bank(customer):
-        user_input = ("""
-        1. Enter Your Name
-        2. Set Pin
-        3. Deposit
-        4. Withdraw
-        5. Total Amount
-        6. Exit
+    def bank(self):
+        user_input = input("""
+        1 - Name
+        2 - PIN
+        3- Deposit
+        4 - withdraw
         """)
 
 
-        def customer_name(bank):
-            customer.name == input("Enter Your Name: ")
-            print("Name Entered Successfully")
+        if user_input == "1":
+                    self.your_name()
+    
+        elif user_input == "2":
+                    self.set_pin()
+        
+        elif user_input == "3":
+                    self.amount_deposit()
+        
+        elif user_input == "4":
+                    self.amount_withdraw()
+        else:
+            print("Exit")
 
-        def customer_pin(bank):
-            customer.pin == int(input("Set Your 4 Digit Pin: "))
-            print("Pin Set Successfully")
+    def your_name(self):
+        self.name = input("Enter Your Name: ")
+        print(self.name," is your Name")
 
-        def customer_deposit(bank):
-            temp = int(input("Enter Your Pin"))
-            if temp == customer.pin:
-                amount = int(input("Deposit Amount: "))
-                if amount < customer.balance:
-                    customer.balance = customer.balance - amount
-                    print(customer.deposit,"rupee you Deposit in your Account")
+    def set_pin(self):
+        self.pin = int(input("Set your PIN"))
+        print("PIN Set Successfully")
 
-        def customer_withdraw(bank):
-            customer.withdraw == 
+    def amount_deposit(self):
+        self.deposit = int(input("Deposit Your Money: "))
+        print("Successfully Deposit")
+
+
+
+c1 = ATM()
+c1.bank()
