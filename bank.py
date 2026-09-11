@@ -75,8 +75,8 @@ class ATM:
                 print("Exit")
                 break
             else:
-                if user_input >= "7":
-                    print("Invalid Syntax Choose from 1 - 6")
+                if user_input > "6":
+                    print("Invalid Syntax Choose from 1-6")
 
 c1 = ATM()
 c1.bank()
